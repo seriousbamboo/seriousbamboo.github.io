@@ -35,7 +35,7 @@ __R is everything!!!__
 # Resume and plots
 
 *   [About me](about.html)
-*   [Plot Flexdashboard](plots.html)
+*   [Plot Flexdashboard](dashboard.html)
 
 
 # Other materials
