@@ -1,25 +1,30 @@
 ---
-title: "My awesome website"
+title: "Liucheng(Steven) Shi"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is Steven's awesome website
+# Welcome
 
 ![](images/foggy_forest.jpg)
 
+Hi there! Welcome to my personal homepage. My name is Liucheng Shi. This page also served as the homework design of P8105.I generate this page using Rstudio.
+Please scroll down or use the navigation bar on the top left
 
-## Subsection 1
+## Other materials
 
-```{r}
-rnorm(10)
-```
+### About course
+
+* [P8015](https://p8105.com/index.html)
+
+* [Columbia Biostatistics](https://www.publichealth.columbia.edu/academics/departments/biostatistics)
 
 
-## Subsection 2
+### Data scientists' selections
 
-## Links to pages within the site
+* [RMarkdown website tutorial](https://nickstrayer.me/RMarkdown_Sites_tutorial/)
 
-[About me](about.html)
+* [Jeff's regular expression](https://docs.google.com/presentation/d/1rLNJVyWuIEQqkqTWUlCY4G-l7H610wM1IRz3CL67Gec/edit#slide=id.p)
+
