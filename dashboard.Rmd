@@ -70,9 +70,16 @@ ch_grade = rt_clean %>%
 ggplotly(ch_grade)
 ```
 
-### Chart C
+### Score vs. Grade.date
 
 ```{r}
-
+rt_clean %>%
+  mutate(text_label = str_c("Grade: ", grade, "\nResturants: ", dba)) %>%
+  plot_ly(x = ~ grade_date, y = ~ score, color = ~ boro, text = ~ text_label,
+    alpha = .5, type = "scatter", mode = "markers") %>% 
+  layout(
+    xaxis = list(title = "Grade Date"),
+    yaxis = list(title = "Score")
+  )
 ```
 
