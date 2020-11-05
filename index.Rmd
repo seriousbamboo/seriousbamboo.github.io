@@ -1,21 +1,46 @@
 ---
-title: "Liucheng(Steven) Shi"
+title: "Liucheng Shi"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
+<img src = "images/foggy_forest.jpg" style = "width:90%"> 
+
 # Welcome
 
-![](images/foggy_forest.jpg)
+Hi there! Welcome to my personal homepage. My name is Liucheng Shi. 
 
-Hi there! Welcome to my personal homepage. My name is Liucheng Shi. This page also served as the homework design of P8105.I generate this page using Rstudio.
-Please scroll down or use the navigation bar on the top left
+This page also served as the homework design of P8105.I generate this page using Rstudio.
 
-## Other materials
+Please scroll down or use the navigation bar on the top/left
 
-### About course
+<img src = "images/business_cat.jpg" style = "width:30%"> 
+
+# My R learning history {.tabset}
+
+## Before attending mailman
+
+<img src = "images/before.png" style = "width:50%"> 
+
+
+
+## Taking Jeff's P8105
+
+<img src = "images/Yoda.jpg" style = "width:50%"> 
+__R is everything!!!__
+
+
+# Resume and plots
+
+*   [About me](about.html)
+*   [Plot Flexdashboard](plots.html)
+
+
+# Other materials
+
+### About this course
 
 * [P8015](https://p8105.com/index.html)
 
