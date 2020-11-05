@@ -31,7 +31,8 @@ rt_clean = rt_df %>%
   filter(cuisine_description %in% c("American","Chinese","Pizza","Cafe","Italian",
                                     "Latin","Mexican","Japanese","Bakery","Caribbean")) %>% 
   mutate(cuisine_description = as.character(cuisine_description)) %>% 
-  mutate(cuisine_description = factor(cuisine_description))
+  mutate(cuisine_description = factor(cuisine_description)) %>% 
+  mutate(grade = as.character(grade), grade = factor(grade))
 ```
 
 
@@ -39,10 +40,11 @@ rt_clean = rt_df %>%
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Top 10 Cuisine(in number) vs. Score
+### Top 10 Cuisine(in number) vs. Score in MANHATTAN
 
 ```{r}
 rt_clean %>%
+  filter(boro == "MANHATTAN") %>% 
   mutate(cuisine_description = fct_reorder(cuisine_description, score)) %>%
   plot_ly(y = ~ score, x = ~ cuisine_description, color = ~ cuisine_description,
           type = "box", colors = "viridis") %>% 
@@ -55,10 +57,17 @@ rt_clean %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Grade of Chinese food restaurants in different areas in NY
 
 ```{r}
-
+ch_grade = rt_clean %>% 
+  filter(cuisine_description == "Chinese") %>%
+  mutate(boro = factor(boro)) %>% 
+  mutate(
+    boro = fct_infreq(boro)) %>%
+  ggplot(aes(x = boro, fill = grade)) + 
+  geom_bar()
+ggplotly(ch_grade)
 ```
 
 ### Chart C
