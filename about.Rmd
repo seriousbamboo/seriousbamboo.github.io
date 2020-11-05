@@ -6,9 +6,58 @@ output:
     toc_float: true
 ---
 
-# This page has information about me.
+<img src = "images/seal.jpg" style = "width:30%">
 
-Student
+# Personal Information
+
+*   Name: Liucheng Shi
+*   Occupation: Student
+*   E-mail: ls3751@cumc.columbia.edu
+
+# Educational background {.tabset}
+
+## Academic
+
+Columbia University, Mailman school of Public Health
+
+*   2020-2022(expected)
+*   Major: Biostatistics (M.S.)
+*   COurses: data science, biostatistical methods
+
+Pennsylvania State University
+
+*   2017-2020
+*   Major: Psychology(Quantative option)
+
+Beijing Foreign Studies University
+
+*   2015-2017
+*   Major: Business Administration
 
 
-## Resume
+## Project and Intership experience
+
+Gene-Environment Interplay Across the Lifespan, Research Assistant
+
+*   Sorted and organized psychological and biological measures.
+*   Ordered and organized medical history
+*   De-identified individual cases
+*   Maintained and updated database
+
+Abbott Medical (Shanghai) Co.,Ltd., Intern, Electrophysiology & Heart Failure Section                                         
+
+*   analyzing product margin, giving the optimization product package to sales team
+*   Tracking and analysis the sales result though this product package strategy
+*   Making sales weekly/monthly report
+*   Assisted in Marcom design newsletter
+
+Ernst & Young, Human Resource Intern 
+
+*   Participated in campus recruitment, including candidates review and selection, interview arrangements, and sending offers
+*   Screened resumes and managed employee profiles by using excel and STATA
+*   Assisted in maintenance of Enrollment Documentation system for all employees
+ 
+
+# Resume 
+
+[Here is my resume, feel free to check](LiuchengSHI CV.pdf)
