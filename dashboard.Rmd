@@ -14,32 +14,42 @@ library(tidyverse)
 library(plotly)
 ```
 
-```{r}
-data("nyc_airbnb")
+```{r, include = F}
+data("rest_inspec")
+rt_df = rest_inspec %>% 
+  filter(grade %in% c("A","B","C")) %>% 
+  mutate(cuisine_description = as.factor(cuisine_description))
 
-nyc_airbnb = 
-  nyc_airbnb %>% 
-  mutate(rating = review_scores_location / 2) %>% 
-  select(neighbourhood_group, neighbourhood, rating, price, room_type, lat, long) %>% 
-  filter(
-    neighbourhood_group == "Manhattan",
-    price %in% 100:500,
-    room_type == "Entire home/apt"
-  ) %>% 
-  drop_na(rating)
+rt_df %>% 
+  group_by(cuisine_description) %>% 
+  summarize(n = n()) %>% 
+  arrange(desc(n))
+
+rt_clean = rt_df %>%
+  mutate(cuisine_description = fct_recode(cuisine_description, Cafe = "CafÃ©/Coffee/Tea", 
+                                          Latin = "Latin (Cuban, Dominican, Puerto Rican, South & Central American)")) %>% 
+  filter(cuisine_description %in% c("American","Chinese","Pizza","Cafe","Italian",
+                                    "Latin","Mexican","Japanese","Bakery","Caribbean")) %>% 
+  mutate(cuisine_description = as.character(cuisine_description)) %>% 
+  mutate(cuisine_description = factor(cuisine_description))
 ```
+
 
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Top 10 Cuisine(in number) vs. Score
 
 ```{r}
-nyc_airbnb %>% 
-  mutate(text_label = str_c("Price: $", price, "Rating", rating)) %>% 
-  plot_ly(x = ~lat, y = ~ long, color = ~ price, text = ~ text_label,
-          alpha = .5, type = "scatter", mode = "markers")
+rt_clean %>%
+  mutate(cuisine_description = fct_reorder(cuisine_description, score)) %>%
+  plot_ly(y = ~ score, x = ~ cuisine_description, color = ~ cuisine_description,
+          type = "box", colors = "viridis") %>% 
+  layout(
+    xaxis = list(title = "Top 10 Cuisine(in number)"),
+    yaxis = list(title = "Score")
+  )
 ```
 
 Column {data-width=350}
